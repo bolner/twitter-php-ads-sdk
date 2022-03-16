@@ -17,7 +17,7 @@ Installation
 .. code:: bash
 
     # installing the latest signed release
-    composer require hborras/twitter-php-ads-sdk
+    composer require tbolner/twitter-php-ads-sdk
 
 
 Quick Start
