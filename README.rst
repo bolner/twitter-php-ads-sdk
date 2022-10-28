@@ -1,5 +1,5 @@
 This branch only modifies the `version number <https://github.com/bolner/twitter-php-ads-sdk/blob/master/src/TwitterAds.php#L23>`_
-from 9 to 10.
+from 9 to 11.
 
 These changes are not implemented:
 
