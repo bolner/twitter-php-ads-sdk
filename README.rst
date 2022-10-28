@@ -7,6 +7,9 @@ These changes are not implemented:
 
 If you wish to implement some of those, then collaborators are welcome.
 
+Packagist page for this version:
+- https://packagist.org/packages/tbolner/twitter-php-ads-sdk
+
 
 Getting Started |Build Status| |Scrutinizer Status|
 ---------------------------------------------------
