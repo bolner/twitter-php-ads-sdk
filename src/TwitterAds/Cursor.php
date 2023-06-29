@@ -227,7 +227,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @return mixed Can return any type.
      * @since 5.0.0
      */
-    public function current()
+    public function current(): mixed
     {
         return isset($this->collection[$this->current_index])
             ? $this->collection[$this->current_index]
@@ -240,7 +240,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @return mixed scalar on success, or null on failure.
      * @since 5.0.0
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->current_index;
     }
@@ -294,7 +294,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @return mixed Can return all value types.
      * @since 5.0.0
      */
-    public function offsetGet($offset)
+    public function offsetGet($offset): mixed
     {
         return isset($this->collection[$offset]) ? $this->collection[$offset] : null;
     }
