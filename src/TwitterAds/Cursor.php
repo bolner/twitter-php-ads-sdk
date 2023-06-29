@@ -65,7 +65,7 @@ class Cursor implements Iterator, Countable, arrayaccess
     /**
      * @return integer
      */
-    public function count()
+    public function count(): int
     {
         return max($this->total_count, count($this->collection));
     }
@@ -89,7 +89,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @throws Errors\ServiceUnavailable
      * @throws \Hborras\TwitterAdsSDK\TwitterAdsException
      */
-    public function next()
+    public function next(): void
     {
         if ($this->current_index == $this->getIndexRight() && !is_null($this->next_cursor)) {
             if ($this->getUseImplicitFetch()) {
@@ -252,7 +252,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * Returns true on success or false on failure.
      * @since 5.0.0
      */
-    public function valid()
+    public function valid(): bool
     {
         return isset($this->collection[$this->current_index]);
     }
@@ -263,7 +263,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->current_index = $this->current_index--;
     }
@@ -280,7 +280,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * The return value will be casted to boolean if non-boolean was returned.
      * @since 5.0.0
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->collection[$offset]);
     }
@@ -311,7 +311,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @return void
      * @since 5.0.0
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         if ($offset === null) {
             $this->collection[] = $value;
@@ -329,7 +329,7 @@ class Cursor implements Iterator, Countable, arrayaccess
      * @return void
      * @since 5.0.0
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         unset($this->collection[$offset]);
     }
